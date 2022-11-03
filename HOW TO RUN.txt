@@ -1,2 +1,6 @@
-model 폴더 아래에 yolov3.weights 파일을 넣어줘야함.
-video 폴더 아래에 passenger_01.mp4 파일이 있어야 함.
+1. model 폴더 아래에 yolov3.weights 파일을 넣어줘야함.
+https://pjreddie.com/darknet/yolo/ <--YOLOv3-320 cfg , weights 다운받아서 넣으면됨
+
+2. video 폴더 아래에 passenger_01.mp4 파일이 있어야 함.
+
+3. object_tracking_passengers.py 실행 
