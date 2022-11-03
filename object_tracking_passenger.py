@@ -12,6 +12,11 @@ conn = pymssql.connect(server="49.247.6.52", user="user2", password="user2", dat
 cursor = conn.cursor()
 cursor.execute("INSERT INTO dbo.TB_PASSENGER_CP (UP_CP, DOWN_CP) values('0','0')")
 conn.commit()
+cursor.execute("SELECT max(PASSENGER_ID_CP) FROM dbo.TB_PASSENGER_CP")
+row3 = cursor.fetchone()
+
+
+
 # conn.close()
 
 frame_size = 416
@@ -143,13 +148,13 @@ while True:
                                 if direction == 1 and centroid[1] < count_limit:
                                         up_count += 1
                                         trackable.counted = True
-                                        cursor.execute("UPDATE dbo.TB_PASSENGER_CP set UP_CP = " + str(up_count) + " where PASSENGER_ID_CP = 1")
+                                        cursor.execute("UPDATE dbo.TB_PASSENGER_CP set UP_CP = " + str(up_count) + " where PASSENGER_ID_CP = "+str(row3[0]))
                                         conn.commit()
                                        
                                 elif direction == 0 and centroid[1] > count_limit:
                                         down_count += 1
                                         trackable.counted = True
-                                        cursor.execute("UPDATE dbo.TB_PASSENGER_CP set DOWN_CP = " + str(down_count) + " where PASSENGER_ID_CP = 1")
+                                        cursor.execute("UPDATE dbo.TB_PASSENGER_CP set DOWN_CP = " + str(down_count) + " where PASSENGER_ID_CP = "+str(row3[0]))
                                         conn.commit()
                                        
 
