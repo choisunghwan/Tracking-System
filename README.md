@@ -27,3 +27,8 @@ https://drive.google.com/file/d/1xLWjyy5YjyxxLccfR3NP1-aQfMc6ZUvk/view?usp=shari
 |3.WebSocket 코드 분석(index.jsp편)|https://couchcoding.tistory.com/333|
 |4.WebSocket 코드 분석(.py편)|https://couchcoding.tistory.com/334|
 |5.WebSocket 코드 분석(server.js편|https://couchcoding.tistory.com/335|
+
+
+### 참고(Reference)
+
+https://pyimagesearch.com/2018/08/13/opencv-people-counter/
